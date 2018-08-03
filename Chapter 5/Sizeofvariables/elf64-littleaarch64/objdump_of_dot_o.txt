@@ -1,0 +1,154 @@
+
+sizeofvariables.o:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000000000 <main>:
+   0:	a9bc7bfd 	stp	x29, x30, [sp, #-64]!
+   4:	910003fd 	mov	x29, sp
+   8:	90000000 	adrp	x0, 0 <main>
+   c:	91000000 	add	x0, x0, #0x0
+  10:	fd400000 	ldr	d0, [x0]
+  14:	fd001ba0 	str	d0, [x29, #48]
+  18:	1e273000 	fmov	s0, #2.500000000000000000e+01
+  1c:	bd002fa0 	str	s0, [x29, #44]
+  20:	52804420 	mov	w0, #0x221                 	// #545
+  24:	b9002ba0 	str	w0, [x29, #40]
+  28:	d2800f60 	mov	x0, #0x7b                  	// #123
+  2c:	f90013a0 	str	x0, [x29, #32]
+  30:	52800820 	mov	w0, #0x41                  	// #65
+  34:	39007fa0 	strb	w0, [x29, #31]
+  38:	52800020 	mov	w0, #0x1                   	// #1
+  3c:	3900ffa0 	strb	w0, [x29, #63]
+  40:	fd401ba0 	ldr	d0, [x29, #48]
+  44:	9100c3a1 	add	x1, x29, #0x30
+  48:	90000000 	adrp	x0, 0 <main>
+  4c:	91000000 	add	x0, x0, #0x0
+  50:	aa0103e2 	mov	x2, x1
+  54:	d2800101 	mov	x1, #0x8                   	// #8
+  58:	94000000 	bl	0 <printf>
+  5c:	bd402fa0 	ldr	s0, [x29, #44]
+  60:	1e22c000 	fcvt	d0, s0
+  64:	9100b3a1 	add	x1, x29, #0x2c
+  68:	90000000 	adrp	x0, 0 <main>
+  6c:	91000000 	add	x0, x0, #0x0
+  70:	aa0103e2 	mov	x2, x1
+  74:	d2800081 	mov	x1, #0x4                   	// #4
+  78:	94000000 	bl	0 <printf>
+  7c:	b9402ba1 	ldr	w1, [x29, #40]
+  80:	b9402ba2 	ldr	w2, [x29, #40]
+  84:	b9402ba3 	ldr	w3, [x29, #40]
+  88:	9100a3a4 	add	x4, x29, #0x28
+  8c:	90000000 	adrp	x0, 0 <main>
+  90:	91000000 	add	x0, x0, #0x0
+  94:	aa0403e5 	mov	x5, x4
+  98:	d2800084 	mov	x4, #0x4                   	// #4
+  9c:	94000000 	bl	0 <printf>
+  a0:	f94013a1 	ldr	x1, [x29, #32]
+  a4:	910083a2 	add	x2, x29, #0x20
+  a8:	90000000 	adrp	x0, 0 <main>
+  ac:	91000000 	add	x0, x0, #0x0
+  b0:	aa0203e3 	mov	x3, x2
+  b4:	d2800102 	mov	x2, #0x8                   	// #8
+  b8:	94000000 	bl	0 <printf>
+  bc:	39407fa0 	ldrb	w0, [x29, #31]
+  c0:	2a0003e4 	mov	w4, w0
+  c4:	91007fa1 	add	x1, x29, #0x1f
+  c8:	90000000 	adrp	x0, 0 <main>
+  cc:	91000000 	add	x0, x0, #0x0
+  d0:	aa0103e3 	mov	x3, x1
+  d4:	d2800022 	mov	x2, #0x1                   	// #1
+  d8:	2a0403e1 	mov	w1, w4
+  dc:	94000000 	bl	0 <printf>
+  e0:	3940ffa1 	ldrb	w1, [x29, #63]
+  e4:	3940ffa2 	ldrb	w2, [x29, #63]
+  e8:	90000000 	adrp	x0, 0 <main>
+  ec:	91000000 	add	x0, x0, #0x0
+  f0:	94000000 	bl	0 <printf>
+  f4:	52800000 	mov	w0, #0x0                   	// #0
+  f8:	a8c47bfd 	ldp	x29, x30, [sp], #64
+  fc:	d65f03c0 	ret
+
+Disassembly of section .rodata:
+
+0000000000000000 <.rodata>:
+   0:	61762061 	.word	0x61762061
+   4:	2e25206c 	.word	0x2e25206c
+   8:	26206634 	.word	0x26206634
+   c:	7a697320 	.word	0x7a697320
+  10:	64252065 	.word	0x64252065
+  14:	74796220 	.word	0x74796220
+  18:	28207365 	.word	0x28207365
+  1c:	64646140 	.word	0x64646140
+  20:	70252072 	.word	0x70252072
+  24:	000a2e29 	.word	0x000a2e29
+  28:	61762062 	.word	0x61762062
+  2c:	3425206c 	.word	0x3425206c
+  30:	2620322e 	.word	0x2620322e
+  34:	7a697320 	.word	0x7a697320
+  38:	64252065 	.word	0x64252065
+  3c:	74796220 	.word	0x74796220
+  40:	28207365 	.word	0x28207365
+  44:	64646140 	.word	0x64646140
+  48:	70252072 	.word	0x70252072
+  4c:	000a2e29 	.word	0x000a2e29
+  50:	61762063 	.word	0x61762063
+  54:	6425206c 	.word	0x6425206c
+  58:	636f2820 	.word	0x636f2820
+  5c:	6f252074 	.word	0x6f252074
+  60:	6568202c 	.word	0x6568202c
+  64:	78252078 	.word	0x78252078
+  68:	20262029 	.word	0x20262029
+  6c:	7a697320 	.word	0x7a697320
+  70:	64252065 	.word	0x64252065
+  74:	74796220 	.word	0x74796220
+  78:	28207365 	.word	0x28207365
+  7c:	64646140 	.word	0x64646140
+  80:	70252072 	.word	0x70252072
+  84:	000a2e29 	.word	0x000a2e29
+  88:	61762064 	.word	0x61762064
+  8c:	6425206c 	.word	0x6425206c
+  90:	73202620 	.word	0x73202620
+  94:	20657a69 	.word	0x20657a69
+  98:	62206425 	.word	0x62206425
+  9c:	73657479 	.word	0x73657479
+  a0:	20402820 	.word	0x20402820
+  a4:	72646461 	.word	0x72646461
+  a8:	29702520 	.word	0x29702520
+  ac:	00000a2e 	.word	0x00000a2e
+  b0:	61762065 	.word	0x61762065
+  b4:	6325206c 	.word	0x6325206c
+  b8:	73202620 	.word	0x73202620
+  bc:	20657a69 	.word	0x20657a69
+  c0:	62206425 	.word	0x62206425
+  c4:	73657479 	.word	0x73657479
+  c8:	20402820 	.word	0x20402820
+  cc:	72646461 	.word	0x72646461
+  d0:	29702520 	.word	0x29702520
+  d4:	00000a2e 	.word	0x00000a2e
+  d8:	61762066 	.word	0x61762066
+  dc:	3525206c 	.word	0x3525206c
+  e0:	20262064 	.word	0x20262064
+  e4:	657a6973 	.word	0x657a6973
+  e8:	20642520 	.word	0x20642520
+  ec:	65747962 	.word	0x65747962
+  f0:	40282073 	.word	0x40282073
+  f4:	64646120 	.word	0x64646120
+  f8:	70252072 	.word	0x70252072
+  fc:	000a2e29 	.word	0x000a2e29
+ 100:	f01b866e 	.word	0xf01b866e
+ 104:	400921f9 	.word	0x400921f9
+
+Disassembly of section .comment:
+
+0000000000000000 <.comment>:
+   0:	43434700 	.inst	0x43434700 ; undefined
+   4:	4428203a 	.inst	0x4428203a ; undefined
+   8:	61696265 	.inst	0x61696265 ; undefined
+   c:	2e37206e 	usubl	v14.8h, v3.8b, v23.8b
+  10:	2d302e33 	stp	s19, s11, [x17, #-128]
+  14:	20293432 	.inst	0x20293432 ; undefined
+  18:	2e332e37 	uqsub	v23.8b, v17.8b, v19.8b
+  1c:	Address 0x000000000000001c is out of bounds.
+
