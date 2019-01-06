@@ -1,0 +1,180 @@
+
+makeLED.o:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000000000 <writeGPIO>:
+   0:	a9bd7bfd 	stp	x29, x30, [sp, #-48]!
+   4:	910003fd 	mov	x29, sp
+   8:	f9000fa0 	str	x0, [x29, #24]
+   c:	f9000ba1 	str	x1, [x29, #16]
+  10:	90000000 	adrp	x0, 0 <writeGPIO>
+  14:	91000000 	add	x0, x0, #0x0
+  18:	aa0003e1 	mov	x1, x0
+  1c:	f9400fa0 	ldr	x0, [x29, #24]
+  20:	94000000 	bl	0 <fopen>
+  24:	f90017a0 	str	x0, [x29, #40]
+  28:	f94017a1 	ldr	x1, [x29, #40]
+  2c:	f9400ba0 	ldr	x0, [x29, #16]
+  30:	94000000 	bl	0 <fputs>
+  34:	f94017a0 	ldr	x0, [x29, #40]
+  38:	94000000 	bl	0 <fclose>
+  3c:	d503201f 	nop
+  40:	a8c37bfd 	ldp	x29, x30, [sp], #48
+  44:	d65f03c0 	ret
+
+0000000000000048 <main>:
+  48:	a9b27bfd 	stp	x29, x30, [sp, #-224]!
+  4c:	910003fd 	mov	x29, sp
+  50:	b9001fa0 	str	w0, [x29, #28]
+  54:	f9000ba1 	str	x1, [x29, #16]
+  58:	b9401fa0 	ldr	w0, [x29, #28]
+  5c:	7100081f 	cmp	w0, #0x2
+  60:	54000180 	b.eq	90 <main+0x48>  // b.none
+  64:	90000000 	adrp	x0, 0 <writeGPIO>
+  68:	91000000 	add	x0, x0, #0x0
+  6c:	94000000 	bl	0 <puts>
+  70:	90000000 	adrp	x0, 0 <writeGPIO>
+  74:	91000000 	add	x0, x0, #0x0
+  78:	94000000 	bl	0 <puts>
+  7c:	90000000 	adrp	x0, 0 <writeGPIO>
+  80:	91000000 	add	x0, x0, #0x0
+  84:	94000000 	bl	0 <puts>
+  88:	52800040 	mov	w0, #0x2                   	// #2
+  8c:	14000086 	b	2a4 <main+0x25c>
+  90:	90000000 	adrp	x0, 0 <writeGPIO>
+  94:	91000000 	add	x0, x0, #0x0
+  98:	94000000 	bl	0 <puts>
+  9c:	f9400ba0 	ldr	x0, [x29, #16]
+  a0:	91002000 	add	x0, x0, #0x8
+  a4:	f9400002 	ldr	x2, [x0]
+  a8:	90000000 	adrp	x0, 0 <writeGPIO>
+  ac:	91000000 	add	x0, x0, #0x0
+  b0:	aa0003e1 	mov	x1, x0
+  b4:	aa0203e0 	mov	x0, x2
+  b8:	94000000 	bl	0 <strcmp>
+  bc:	7100001f 	cmp	w0, #0x0
+  c0:	54000241 	b.ne	108 <main+0xc0>  // b.any
+  c4:	90000000 	adrp	x0, 0 <writeGPIO>
+  c8:	91000000 	add	x0, x0, #0x0
+  cc:	94000000 	bl	0 <puts>
+  d0:	90000000 	adrp	x0, 0 <writeGPIO>
+  d4:	91000001 	add	x1, x0, #0x0
+  d8:	90000000 	adrp	x0, 0 <writeGPIO>
+  dc:	91000000 	add	x0, x0, #0x0
+  e0:	94000000 	bl	0 <writeGPIO>
+  e4:	5290d400 	mov	w0, #0x86a0                	// #34464
+  e8:	72a00020 	movk	w0, #0x1, lsl #16
+  ec:	94000000 	bl	0 <usleep>
+  f0:	90000000 	adrp	x0, 0 <writeGPIO>
+  f4:	91000001 	add	x1, x0, #0x0
+  f8:	90000000 	adrp	x0, 0 <writeGPIO>
+  fc:	91000000 	add	x0, x0, #0x0
+ 100:	94000000 	bl	0 <writeGPIO>
+ 104:	14000064 	b	294 <main+0x24c>
+ 108:	f9400ba0 	ldr	x0, [x29, #16]
+ 10c:	91002000 	add	x0, x0, #0x8
+ 110:	f9400002 	ldr	x2, [x0]
+ 114:	90000000 	adrp	x0, 0 <writeGPIO>
+ 118:	91000000 	add	x0, x0, #0x0
+ 11c:	aa0003e1 	mov	x1, x0
+ 120:	aa0203e0 	mov	x0, x2
+ 124:	94000000 	bl	0 <strcmp>
+ 128:	7100001f 	cmp	w0, #0x0
+ 12c:	54000141 	b.ne	154 <main+0x10c>  // b.any
+ 130:	90000000 	adrp	x0, 0 <writeGPIO>
+ 134:	91000000 	add	x0, x0, #0x0
+ 138:	94000000 	bl	0 <puts>
+ 13c:	90000000 	adrp	x0, 0 <writeGPIO>
+ 140:	91000001 	add	x1, x0, #0x0
+ 144:	90000000 	adrp	x0, 0 <writeGPIO>
+ 148:	91000000 	add	x0, x0, #0x0
+ 14c:	94000000 	bl	0 <writeGPIO>
+ 150:	14000051 	b	294 <main+0x24c>
+ 154:	f9400ba0 	ldr	x0, [x29, #16]
+ 158:	91002000 	add	x0, x0, #0x8
+ 15c:	f9400002 	ldr	x2, [x0]
+ 160:	90000000 	adrp	x0, 0 <writeGPIO>
+ 164:	91000000 	add	x0, x0, #0x0
+ 168:	aa0003e1 	mov	x1, x0
+ 16c:	aa0203e0 	mov	x0, x2
+ 170:	94000000 	bl	0 <strcmp>
+ 174:	7100001f 	cmp	w0, #0x0
+ 178:	54000141 	b.ne	1a0 <main+0x158>  // b.any
+ 17c:	90000000 	adrp	x0, 0 <writeGPIO>
+ 180:	91000000 	add	x0, x0, #0x0
+ 184:	94000000 	bl	0 <puts>
+ 188:	90000000 	adrp	x0, 0 <writeGPIO>
+ 18c:	91000001 	add	x1, x0, #0x0
+ 190:	90000000 	adrp	x0, 0 <writeGPIO>
+ 194:	91000000 	add	x0, x0, #0x0
+ 198:	94000000 	bl	0 <writeGPIO>
+ 19c:	1400003e 	b	294 <main+0x24c>
+ 1a0:	f9400ba0 	ldr	x0, [x29, #16]
+ 1a4:	91002000 	add	x0, x0, #0x8
+ 1a8:	f9400002 	ldr	x2, [x0]
+ 1ac:	90000000 	adrp	x0, 0 <writeGPIO>
+ 1b0:	91000000 	add	x0, x0, #0x0
+ 1b4:	aa0003e1 	mov	x1, x0
+ 1b8:	aa0203e0 	mov	x0, x2
+ 1bc:	94000000 	bl	0 <strcmp>
+ 1c0:	7100001f 	cmp	w0, #0x0
+ 1c4:	54000141 	b.ne	1ec <main+0x1a4>  // b.any
+ 1c8:	90000000 	adrp	x0, 0 <writeGPIO>
+ 1cc:	91000000 	add	x0, x0, #0x0
+ 1d0:	94000000 	bl	0 <puts>
+ 1d4:	90000000 	adrp	x0, 0 <writeGPIO>
+ 1d8:	91000001 	add	x1, x0, #0x0
+ 1dc:	90000000 	adrp	x0, 0 <writeGPIO>
+ 1e0:	91000000 	add	x0, x0, #0x0
+ 1e4:	94000000 	bl	0 <writeGPIO>
+ 1e8:	1400002b 	b	294 <main+0x24c>
+ 1ec:	f9400ba0 	ldr	x0, [x29, #16]
+ 1f0:	91002000 	add	x0, x0, #0x8
+ 1f4:	f9400002 	ldr	x2, [x0]
+ 1f8:	90000000 	adrp	x0, 0 <writeGPIO>
+ 1fc:	91000000 	add	x0, x0, #0x0
+ 200:	aa0003e1 	mov	x1, x0
+ 204:	aa0203e0 	mov	x0, x2
+ 208:	94000000 	bl	0 <strcmp>
+ 20c:	7100001f 	cmp	w0, #0x0
+ 210:	540003c1 	b.ne	288 <main+0x240>  // b.any
+ 214:	9101c3a2 	add	x2, x29, #0x70
+ 218:	90000000 	adrp	x0, 0 <writeGPIO>
+ 21c:	91000001 	add	x1, x0, #0x0
+ 220:	aa0203e0 	mov	x0, x2
+ 224:	a9400c22 	ldp	x2, x3, [x1]
+ 228:	a9000c02 	stp	x2, x3, [x0]
+ 22c:	f9400822 	ldr	x2, [x1, #16]
+ 230:	f9000802 	str	x2, [x0, #16]
+ 234:	f8415021 	ldur	x1, [x1, #21]
+ 238:	f8015001 	stur	x1, [x0, #21]
+ 23c:	90000000 	adrp	x0, 0 <writeGPIO>
+ 240:	91000001 	add	x1, x0, #0x0
+ 244:	9101c3a0 	add	x0, x29, #0x70
+ 248:	94000000 	bl	0 <fopen>
+ 24c:	f9006fa0 	str	x0, [x29, #216]
+ 250:	14000005 	b	264 <main+0x21c>
+ 254:	910083a1 	add	x1, x29, #0x20
+ 258:	90000000 	adrp	x0, 0 <writeGPIO>
+ 25c:	91000000 	add	x0, x0, #0x0
+ 260:	94000000 	bl	0 <printf>
+ 264:	910083a0 	add	x0, x29, #0x20
+ 268:	f9406fa2 	ldr	x2, [x29, #216]
+ 26c:	52800a01 	mov	w1, #0x50                  	// #80
+ 270:	94000000 	bl	0 <fgets>
+ 274:	f100001f 	cmp	x0, #0x0
+ 278:	54fffee1 	b.ne	254 <main+0x20c>  // b.any
+ 27c:	f9406fa0 	ldr	x0, [x29, #216]
+ 280:	94000000 	bl	0 <fclose>
+ 284:	14000004 	b	294 <main+0x24c>
+ 288:	90000000 	adrp	x0, 0 <writeGPIO>
+ 28c:	91000000 	add	x0, x0, #0x0
+ 290:	94000000 	bl	0 <puts>
+ 294:	90000000 	adrp	x0, 0 <writeGPIO>
+ 298:	91000000 	add	x0, x0, #0x0
+ 29c:	94000000 	bl	0 <puts>
+ 2a0:	52800000 	mov	w0, #0x0                   	// #0
+ 2a4:	a8ce7bfd 	ldp	x29, x30, [sp], #224
+ 2a8:	d65f03c0 	ret
